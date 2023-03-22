@@ -118,10 +118,10 @@ test('install --save-exact', async () => {
   expect(pkg.devDependencies).toStrictEqual({ 'is-positive': '3.1.0' })
 })
 
-test('install to a project that uses package.yaml', async () => {
+test('install to a project that uses package.yaml', async () => { //.yml TODO
   const project = prepareEmpty()
 
-  await writeProjectManifest(path.resolve('package.yaml'), { name: 'foo', version: '1.0.0' })
+  await writeProjectManifest(path.resolve('package.yaml'), { name: 'foo', version: '1.0.0' }) //.yml TODO
 
   await execPnpm(['install', 'is-positive@3.1.0', '--save-exact', '--save-dev'])
 

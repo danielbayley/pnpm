@@ -85,10 +85,10 @@ export async function tryReadProjectManifest (projectDir: string): Promise<{
     if (err.code !== 'ENOENT') throw err
   }
   try {
-    const manifestPath = path.join(projectDir, 'package.yaml')
+    const manifestPath = path.join(projectDir, 'package.yaml') //.yml TODO
     const manifest = await readPackageYaml(manifestPath)
     return {
-      fileName: 'package.yaml',
+      fileName: 'package.yaml', //.yml TODO
       manifest,
       writeProjectManifest: createManifestWriter({ initialManifest: manifest, manifestPath }),
     }
@@ -159,7 +159,7 @@ export async function readExactProjectManifest (manifestPath: string) {
       }),
     }
   }
-  case 'package.yaml': {
+  case 'package.yaml': { //.yml TODO
     const manifest = await readPackageYaml(manifestPath)
     return {
       manifest,

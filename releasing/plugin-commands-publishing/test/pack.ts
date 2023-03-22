@@ -23,7 +23,7 @@ test('pack: package with package.json', async () => {
   expect(await exists('package.json')).toBeTruthy()
 })
 
-test('pack: package with package.yaml', async () => {
+test('pack: package with package.yaml', async () => { //.yml TODO
   prepare({
     name: 'test-publish-package.yaml',
     version: '0.0.0',
@@ -37,7 +37,7 @@ test('pack: package with package.yaml', async () => {
   })
 
   expect(await exists('test-publish-package.yaml-0.0.0.tgz')).toBeTruthy()
-  expect(await exists('package.yaml')).toBeTruthy()
+  expect(await exists('package.yaml')).toBeTruthy() //.yml TODO
   expect(await exists('package.json')).toBeFalsy()
 })
 

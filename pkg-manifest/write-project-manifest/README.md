@@ -20,6 +20,7 @@ import path from 'path'
 
 (async () => await writeProjectManifest(path.resolve('package.yaml'), { name: 'foo', version: '1.0.0' }))()
 ```
+<!--.yml TODO-->
 
 ## License
 

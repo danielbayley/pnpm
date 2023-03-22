@@ -81,7 +81,7 @@ function normalizePatterns (patterns: readonly string[]) {
       pattern.replace(/\/?$/, '/package.json5')
     )
     normalizedPatterns.push(
-      pattern.replace(/\/?$/, '/package.yaml')
+      pattern.replace(/\/?$/, '/package.y{a,}ml')
     )
   }
   return normalizedPatterns

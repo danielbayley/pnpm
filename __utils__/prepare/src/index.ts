@@ -81,7 +81,7 @@ export function prepare (
     break
   case 'YAML':
       writeYamlFile(path.join(dir, 'package.yaml'), { name: 'project', version: '0.0.0', ...manifest } as any) // eslint-disable-line
-    break
+    break //.yml TODO
   }
   process.chdir(dir)
 
